@@ -11,6 +11,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+
+    },
+    base: process.env.NODE_ENV === 'production' ? '/sneakers/' : '/',
+
   }
 })

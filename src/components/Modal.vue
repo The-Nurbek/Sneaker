@@ -49,12 +49,12 @@ const finished = () => {
 </script>
 
 <style lang="scss" scoped>
-
 @mixin media($size) {
-  @media screen and (max-width:#{$size}px) {
-    @content
-  }
+    @media screen and (max-width:#{$size}px) {
+        @content
+    }
 }
+
 .modal {
     position: fixed;
     top: 0;
@@ -73,11 +73,13 @@ const finished = () => {
         height: 100%;
         background: rgb(255, 255, 255);
         padding: 20px;
-        @include media(768){
-           width: 320px;
-           @include media(576){
-            width: 270px;
-           }
+
+        @include media(768) {
+            width: 320px;
+
+            @include media(576) {
+                width: 270px;
+            }
         }
     }
 }
